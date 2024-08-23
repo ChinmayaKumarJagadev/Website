@@ -16,18 +16,42 @@
   }
 }
 
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /* @apply bg-cover bg-no-repeat bg-center;
+  background-image: url('../assets/images/bg-1.jpg');
+  background-color: rgb(var(--background-start-rgb));
+  background-size: cover;
+  height: 100vh;
+  box-shadow: inset */
 }
 
 @layer utilities {
+  @screen sm {
+    body {
+      @apply bg-contain bg-center;
+    }
+  }
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+.text-style{
+  padding: 1rem; 
+  border-radius: 8px; 
+  /* background: rgba(43, 42, 42, 0.5);  */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+}
+.carousel-image{
+  width: 25vw;
+  height: 300px;
+}
+
+@media screen and (max-width: 468px) {
+  .carousel-image{
+    width: 50vw;
+    height: 300px;
   }
 }
