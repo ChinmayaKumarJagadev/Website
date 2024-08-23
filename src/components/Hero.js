@@ -144,7 +144,7 @@ import { Canvas } from "@react-three/fiber";
 import { animate, useMotionTemplate, useMotionValue } from "framer-motion";
 import { useEffect } from "react";
 import { FiArrowRight } from "react-icons/fi";
-import { isMobile } from "react-device-detect";
+import {isMobile} from 'react-device-detect';
 import ScrollCarousel from "./carousel";
 
 function Hero() {
@@ -165,7 +165,7 @@ function Hero() {
   const border = useMotionTemplate`1px solid ${color}`;
   const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
 
-  console.log(isMobile, "--");
+  console.log(isMobile, '--')
   return (
     <motion.section
       style={{
@@ -179,8 +179,8 @@ function Hero() {
              top-10 text-center leading-snug sm:leading-relaxed text-style"
         // initial={{ opacity: 0, x: -150 }}
         // animate={{ opacity: 1, x: 500 }}
-        initial={{ opacity: 0, x: !isMobile ? -150 : -100 }}
-        animate={{ opacity: 1, x: !isMobile ? 700 : 50 }}
+        initial={{ opacity: 0, x: !isMobile ? -150  : -100}}
+        animate={{ opacity: 1, x: !isMobile ?  700 : 50}}
         transition={{
           duration: 5,
           ease: "easeInOut",
@@ -190,7 +190,7 @@ function Hero() {
       >
         <span
           className="text-2xl font-bold
-          max-w-3xl bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-xl font-medium leading-tight 
+          max-w-3xl text-white bg-clip-text text-center text-xl font-medium leading-tight 
           text-transparent sm:text-3xl sm:leading-tight md:text-5xl md:leading-tight"
         >
           Turning your dreams into <br />
@@ -198,7 +198,7 @@ function Hero() {
         </span>
       </motion.div>
 
-      <ScrollCarousel />
+      <ScrollCarousel/>
       <motion.button
         style={{ border, boxShadow }}
         whileHover={{ scale: 1.015 }}

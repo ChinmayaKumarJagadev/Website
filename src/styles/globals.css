@@ -51,7 +51,7 @@ body {
 
 @media screen and (max-width: 468px) {
   .carousel-image{
-    width: 50vw;
-    height: 300px;
+    width: 60vw;
+    height: 250px;
   }
 }
